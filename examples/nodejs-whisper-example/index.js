@@ -25,7 +25,7 @@ const prompt = () => {
 
 const main = async () => {
   status = new StatusJS();
-  chatName = "foo-bar-baz";
+  chatName = process.argv[2];
 
   await status.connect("http://localhost:8545");
   await status.joinChat(chatName);
